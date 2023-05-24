@@ -15,7 +15,7 @@ public class Main {
         System.out.println(Arrays.toString(sales));
 
         System.out.println("Общая сумма продаж за все месяцы: " +service.amountOfAllSales(sales));
-        System.out.println("Средняя сумма продаж в месяц: " +service.averageAmount(sales));
+        System.out.println("Средняя сумма продаж в месяц: " +service.averageAmountCounter(sales));
         System.out.println("В каком по счёту месяце было максимум продаж: " +service.maxSales(sales));
         System.out.println("В каком по счёту месяце было минимум продаж: " +service.minSales(sales));
         System.out.println("Кол-во месяцев с продажами ниже средних: " +service.monthsWithSalesBelowAverage(sales));

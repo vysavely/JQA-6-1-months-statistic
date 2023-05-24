@@ -32,7 +32,7 @@ public class StatsService {
         return allSalesSum;
     }
 
-    public long averageAmount(long[] sales) {
+    public long averageAmountCounter(long[] sales) {
         long allSalesSum = 0; // переменная для хранения всей суммы продаж за все месяцы
         for (long sale : sales) {
             allSalesSum = allSalesSum + sale;
@@ -42,8 +42,9 @@ public class StatsService {
 
     public long monthsWithSalesBelowAverage(long[] sales) {
         long monthBelowAverage = 0;
+        long averageAmountValue = averageAmountCounter(sales);
         for (long sale : sales) {
-            if (sale < averageAmount(sales)) { //здесь значения ячеек из массива sales сравниваются со значениями, возвращаемыми методом averageAmount при обработке массива sales
+            if (sale < averageAmountValue) { //здесь значения ячеек из массива sales сравниваются со значениями, возвращаемыми методом averageAmount при обработке массива sales
                 monthBelowAverage = monthBelowAverage + 1;
             }
         }
@@ -52,8 +53,9 @@ public class StatsService {
 
     public long monthsWithSalesAboveAverage(long[] sales) {
         long monthAboveAverage = 0;
+        long averageAMountValue = averageAmountCounter(sales);
         for (long sale : sales) {
-            if (sale > averageAmount(sales)) { //здесь значения ячеек из массива sales сравниваются со значениями, возвращаемыми методом averageAmount при обработке массива sales
+            if (sale > averageAMountValue) { //здесь значения ячеек из массива sales сравниваются со значениями, возвращаемыми методом averageAmount при обработке массива sales
                 monthAboveAverage = monthAboveAverage + 1;
             }
         }

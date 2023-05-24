@@ -26,7 +26,7 @@ public class statTest {
           StatsService service = new StatsService();
 
           long expectedAverageAmount = Arrays.stream(sales).sum() / sales.length; //сумма всех значений массива sales делится на количество ячеек массива
-          long actualAverageAmount = service.averageAmount(sales);
+          long actualAverageAmount = service.averageAmountCounter(sales);
 
           Assertions.assertEquals(expectedAverageAmount, actualAverageAmount);
           System.out.println(expectedAverageAmount + " == " + actualAverageAmount);
