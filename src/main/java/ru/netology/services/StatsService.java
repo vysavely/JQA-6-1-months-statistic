@@ -27,17 +27,13 @@ public class StatsService {
         long allSalesSum = 0; // переменная для хранения всей суммы продаж за все месяцы
 
         for (long sale : sales) {  //данный цикл перебирает все данные в массиве и поочерёдно выдаёт их в переменную sale
-            allSalesSum = allSalesSum + sale;
+            allSalesSum += sale;
         }
         return allSalesSum;
     }
 
     public long averageAmount(long[] sales) {
-        long allSalesSum = 0; // переменная для хранения всей суммы продаж за все месяцы
-        for (long sale : sales) {
-            allSalesSum = allSalesSum + sale;
-        }
-        return allSalesSum / sales.length; //сумма всех продаж делится на количество месяцев в году (кол-во ячеек в цикле).
+        return amountOfAllSales(sales) / sales.length; //сумма всех продаж делится на количество месяцев в году (кол-во ячеек в цикле).
     }
 
     public long monthsWithSalesBelowAverage(long[] sales) {

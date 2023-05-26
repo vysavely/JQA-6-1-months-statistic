@@ -95,7 +95,7 @@ public class statTest {
           long actualAboveAverage = service.monthsWithSalesAboveAverage(sales);
 
           for (long sale : sales) {
-               if (sale < AverageAmountSales) {
+               if (sale > AverageAmountSales) {
                     expectedAboveAverage = expectedAboveAverage + 1;
                }
           }
